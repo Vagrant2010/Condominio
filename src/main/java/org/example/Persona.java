@@ -9,7 +9,7 @@ import lombok.Data;
 
 public class Persona {
 
-    private String nome,cognome,indirizzo,numeroTel;
+    private String nome,cognome,numeroTel;
     Condominio condominio;
 
 }

@@ -2,7 +2,7 @@ package org.example;
 
 public class Residenti extends Persona implements Pagamenti{
 
-    Proprietari flagPropietario;
+    ProprietariAppartamenti flagPropietario;
 
     public Residenti(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
         super(nome, cognome, indirizzo, numeroTel, condominio);
@@ -30,6 +30,16 @@ public class Residenti extends Persona implements Pagamenti{
 
     @Override
     public void pagaAcqua() {
+
+    }
+
+    @Override
+    public void pagaRateAmministratore() {
+
+    }
+
+    @Override
+    public void PagaPortinaio() {
 
     }
 }

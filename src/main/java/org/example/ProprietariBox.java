@@ -8,7 +8,7 @@ public class ProprietariBox extends Persona implements Pagamenti{
 
 
     public ProprietariBox(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
-        super(nome, cognome, indirizzo, numeroTel, condominio);
+        super(nome, cognome, indirizzo, condominio);
     }
 
     @Override

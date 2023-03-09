@@ -1,10 +1,10 @@
 package org.example;
 
 public class ProprietariAppartamenti extends Persona implements Pagamenti{
-    private int interno;
+    private int interno,piano;
 
     public ProprietariAppartamenti(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
-        super(nome, cognome, indirizzo, numeroTel, condominio);
+        super(nome, cognome, indirizzo, condominio);
     }
 
 
