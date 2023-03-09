@@ -1,10 +1,10 @@
-package org.example;
+package it.java2023;
 
-public class Residenti extends Persona implements Pagamenti{
+public class Portinaio extends Persona implements Pagamenti {
 
-    ProprietariAppartamenti flagPropietario;
 
-    public Residenti(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
+
+    public Portinaio(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
         super(nome, cognome, indirizzo, numeroTel, condominio);
     }
 

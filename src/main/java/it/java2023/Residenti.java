@@ -1,14 +1,11 @@
-package org.example;
+package it.java2023;
 
-public class ProprietariBox extends Persona implements Pagamenti{
+public class Residenti extends Persona implements Pagamenti{
 
+    ProprietariAppartamenti flagPropietario;
 
-   private int numeroBox;
-
-
-
-    public ProprietariBox(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
-        super(nome, cognome, indirizzo, condominio);
+    public Residenti(String nome, String cognome, String indirizzo, String numeroTel, Condominio condominio) {
+        super(nome, cognome, indirizzo, numeroTel, condominio);
     }
 
     @Override

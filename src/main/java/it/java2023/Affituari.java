@@ -1,4 +1,4 @@
-package org.example;
+package it.java2023;
 
 public class Affituari extends Persona implements Pagamenti{
 
