@@ -1,0 +1,75 @@
+Creare un programma che consenta a un amministratore
+condominiale di tener conto dei pagamenti delle
+spese condominiali da parte dei residenti.
+Le spese condominiali da versare riguardano:
+- ELETTRICITA'.
+- PULIZIE SETTIMANALI.
+- MANUTENZIONE ANNUALE.
+- RISCALDAMENTO CONDOMINIALE se NON AUTONOMO.
+- ACQUA.
+- Rata Amministratore.
+*-*-*
+CLASSE CONDOMINIO:
+String indirizzo, int numPalazzine, int numAppartamenti,
+int numPiani, String città, boolean portinaio;
++ Metodo CambiaResidente(appartamento o box o portinaio);
+*-*-*
+INTERFACCIA Pagamenti:
++ Metodo paga elettricità (vuoto).
++ Metodo paga pulizia settimanale (vuoto).
++ Metodo paga manutenzione annuale (vuoto).
++ Metodo paga riscald.cond. (vuoto).
++ Metodo paga acqua (vuoto).
++ Metodo paga Rata Amministratore (vuoto).
++ Metodo paga portinaio (vuoto).
+*-*-*
+CLASSE Persona:
+String nome; String cognome; String numTel.
+Condominio condominio;
+getters & setters.
+*-*-*
+CLASSE ProprietariAppartamenti ESTENDE Persona IMPLEMENTA Pagamenti:
+int interno;
+int piano;
+(metodi da interfaccia)
++ Metodo paga elettricità (se c'è ascensore, in base al piano).
++ Metodo paga pulizia settimanale.
++ Metodo paga manutenzione annuale.
++ Metodo paga riscald.cond. .
++ Metodo paga acqua.
++ Metodo paga Rata Amministratore.
++ Metodo paga portinaio.
+*-*-*
+CLASSE ProprietariBox ESTENDE Persona IMPLEMENTA Pagamenti:
+int numeroBox;
+(metodi da interfaccia)
++ Metodo paga elettricità (senza ascensore e senza citofono).
++ Metodo paga pulizia settimanale.
++ Metodo paga manutenzione annuale (senza ascensore se non lo usa).
++ Metodo paga acqua.
++ Metodo paga Rata Amministratore (diminuito in percentuale).
++ Metodo paga portinaio (diminuito in percentuale).
+*-*-*
+CLASSE Portinaio ESTENDE Persona IMPLEMENTA Pagamenti:
+int interno;
++ Metodo paga elettricità.
++ Metodo paga pulizia settimanale (dipende se volta da lui o meno).
++ Metodo paga manutenzione annuale (diminuita per le operazioni che può svolgere).
++ Metodo paga riscald.cond. .
++ Metodo paga acqua.
+*-*-*
+CLASSE Amministratore ESTENDE Persona:
+ArrayList Condominio[] condominiAmministrati;
+String indirizzo;
++ Metodo aggiungiCondominio;
++ Metodo eliminaCondominio;
++ Metodo cambioAmministratore;
++ Metodo calcolaPagamenti;
++ Metodo calcolaStipPortinaio;
++ Metodo calcolaOnorario;
++ Metodo StampaPagamento.
+*-*-*
+CLASSE GestDatabase:
++ Metodo connetti a database (creato o richiamato);
++ Metodo crea/richiama tabelle: Condominii, ProprietariAppartamenti,
+  ProprietariBox, Portinai, Persone.
