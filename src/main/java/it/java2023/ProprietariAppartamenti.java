@@ -1,4 +1,4 @@
-package org.example;
+package it.java2023;
 
 public class ProprietariAppartamenti extends Persona implements Pagamenti{
     private int interno,piano;

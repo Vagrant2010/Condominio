@@ -1,4 +1,4 @@
-package org.example;
+package it.java2023;
 
 import com.sun.jdi.connect.spi.Connection;
 
